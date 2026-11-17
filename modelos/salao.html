@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Atelier Lume · Salão de beleza (modelo de demonstração)</title>
+<meta name="robots" content="noindex, nofollow"><meta name="description" content="Modelo de site para salão de beleza feito pela Radar Group. Empresa fictícia.">
+<meta name="theme-color" content="#f6f0ea">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f6f0ea;--bg2:#fffaf6;--ink:#241a1a;--mut:#665552;--vinho:#611c27;--blush:#e3bec3;--line:#e6d8d0;--ease:cubic-bezier(.2,.7,.2,1)}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}a{color:inherit}.w{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:1.02;margin:0;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--vinho);outline-offset:3px}
+.aviso{background:var(--vinho);color:#fff;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px}
+header .w{display:flex;justify-content:space-between;align-items:center;min-height:84px;gap:16px}
+.marca{font:600 28px/1 "Cormorant Garamond",serif;text-decoration:none;letter-spacing:.02em}.marca i{color:var(--vinho)}
+.nav{display:flex;gap:30px;align-items:center}.nav a{text-decoration:none;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);transition:color .2s}.nav a:hover{color:var(--vinho)}
+.menu-b{display:none;background:none;border:1px solid var(--line);border-radius:99px;padding:10px 16px;font:500 14px Jost;cursor:pointer;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:99px;font:500 14px/1 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .15s var(--ease),background .25s,color .25s}
+.btn:active{transform:scale(.97)}.btn.a{background:var(--vinho);color:#fff}.btn.a:hover{background:#4a141d}.btn.g{border:1px solid var(--ink);color:var(--ink);background:transparent}.btn.g:hover{background:var(--ink);color:var(--bg)}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:36px;padding-bottom:90px}
+.olho{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--vinho);margin:0 0 22px}
+.hero h1{font-size:clamp(52px,7.4vw,108px)}.hero h1 em{color:var(--vinho)}
+.hero p.sub{font-size:19px;color:var(--mut);max-width:38ch;margin:26px 0 34px}.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.fotos{position:relative;padding-bottom:60px}.fotos .grande{border-radius:999px 999px 18px 18px;aspect-ratio:4/5.2;object-fit:cover;width:100%}
+.fotos .peq{position:absolute;left:-46px;bottom:0;width:44%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:8px solid var(--bg);box-shadow:0 24px 50px -24px rgba(36,26,26,.45)}
+.selo{position:absolute;right:-10px;top:12%;width:120px;height:120px;border-radius:50%;background:var(--blush);display:grid;place-content:center;text-align:center;font:italic 500 20px/1.1 "Cormorant Garamond",serif;color:var(--vinho);animation:gira 30s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.sec{padding:110px 0}.sec h2{font-size:clamp(42px,5.6vw,76px)}.sec h2 em{color:var(--vinho)}.lead{color:var(--mut);max-width:54ch;margin:16px 0 44px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}.tabs button{border:1px solid var(--line);background:var(--bg2);color:var(--ink);padding:12px 20px;border-radius:99px;font:500 14px Jost;letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.painel{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}.painel img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.lista{list-style:none;margin:0;padding:0}.lista li{display:grid;grid-template-columns:1fr auto;gap:2px 18px;padding:20px 0;border-bottom:1px solid var(--line)}.lista b{font:500 26px/1.1 "Cormorant Garamond",serif}.lista span{font-weight:500;color:var(--vinho);align-self:center}.lista p{grid-column:1/-1;margin:0;color:var(--mut);font-size:15px}
+.tag{display:inline-block;font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--mut);color:var(--mut);padding:4px 7px;border-radius:4px;vertical-align:middle}
+.espaco{position:relative;border-radius:22px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.espaco img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.espaco::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(36,26,26,.78),rgba(36,26,26,.05) 60%)}
+.espaco div{padding:44px;max-width:620px}.espaco h2{color:#fff}.espaco p{color:rgba(255,255,255,.88);margin:14px 0 0}
+.dep{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.dep figure{margin:0;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:30px}
+.dep blockquote{margin:0 0 18px;font:italic 500 23px/1.35 "Cormorant Garamond",serif}.dep figcaption{font-size:14px;color:var(--mut)}
+.agenda{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;background:var(--bg2);border:1px solid var(--line);border-radius:26px;padding:56px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{display:grid;gap:6px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.full{grid-column:1/-1}
+input,select{font:inherit;font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink);padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}input:focus,select:focus{outline:none;border-color:var(--vinho)}
+.nota{font-size:14px;color:var(--mut)}
+footer{padding:50px 0 110px;color:var(--mut);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.on{opacity:1;transform:none}
+dialog{max-width:min(520px,92vw);border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--bg2);color:var(--ink)}dialog::backdrop{background:rgba(36,26,26,.55)}dialog pre{white-space:pre-wrap;font:15px/1.5 Jost,sans-serif;background:var(--bg);padding:14px;border-radius:12px}dialog h2{font-size:34px}dialog .ctas{margin-top:16px}
+.barra{display:none}
+@media (max-width:920px){.hero .w,.painel,.agenda{grid-template-columns:1fr}.fotos{max-width:520px;margin:0 auto;padding-left:30px}.fotos .peq{left:0}.dep{grid-template-columns:1fr}.agenda{padding:30px 22px}.sec{padding:76px 0}
+  .nav{position:fixed;inset:84px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg2);padding:8px 24px 20px;border-bottom:1px solid var(--line);display:none;z-index:30}.nav.aberto{display:flex}.nav a{padding:14px 0;border-bottom:1px solid var(--line)}.menu-b{display:block}
+  .barra{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(246,240,234,.95);border-top:1px solid var(--line)}}
+@media (max-width:560px){form{grid-template-columns:1fr}.selo{width:92px;height:92px;font-size:16px;right:0}.espaco div{padding:28px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="aviso" role="note"><b>Modelo de demonstração da Radar Group.</b> Salão, preços e depoimentos são fictícios. Fotos ilustrativas (Pexels).</div>
+<header><div class="w"><a class="marca" href="#topo">Atelier <i>Lume</i></a><button class="menu-b" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#espaco">O espaço</a><a href="#depoimentos">Clientes</a><a href="#agenda">Agendar</a></nav></div></header>
+<main id="topo">
+<section class="hero"><div class="w"><div class="rv"><p class="olho">Cabelo · cor · cuidado</p><h1>Cabelo que <em>conversa</em> com você.</h1>
+  <p class="sub">Corte pensado para o seu rosto, cor que dura e tratamento que respeita o fio. Com hora marcada e café enquanto espera.</p>
+  <div class="ctas"><a class="btn a" href="#agenda">Agendar horário</a><a class="btn g" href="#servicos">Ver serviços</a></div></div>
+  <div class="fotos rv"><img class="grande" src="https://images.pexels.com/photos/3993312/pexels-photo-3993312.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cabeleireira fazendo coloração em cliente" width="1200" height="1560" fetchpriority="high">
+    <img class="peq" src="https://images.pexels.com/photos/14615061/pexels-photo-14615061.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Escova modelando o cabelo" loading="lazy" width="600" height="600"><div class="selo" aria-hidden="true">hora<br>marcada</div></div></div></section>
+<section class="sec" id="servicos"><div class="w"><h2 class="rv">Nossos <em>serviços</em></h2><p class="lead rv">Escolha a categoria. Preços de exemplo <span class="tag">demonstrativos</span>: no site do salão entram os valores reais.</p>
+  <div class="tabs rv" data-tabs role="tablist" aria-label="Categorias">
+    <button role="tab" aria-selected="true" aria-controls="t1" id="b1">Corte</button><button role="tab" aria-selected="false" aria-controls="t2" id="b2" tabindex="-1">Coloração</button><button role="tab" aria-selected="false" aria-controls="t3" id="b3" tabindex="-1">Tratamentos</button><button role="tab" aria-selected="false" aria-controls="t4" id="b4" tabindex="-1">Penteados</button></div>
+  <div class="painel" role="tabpanel" id="t1" aria-labelledby="b1"><img src="https://images.pexels.com/photos/3993445/pexels-photo-3993445.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Corte feminino com tesoura" loading="lazy" width="900" height="1125"><ul class="lista">
+    <li><b>Corte feminino</b><span>R$ 90</span><p>Consulta, lavagem, corte e finalização.</p></li><li><b>Franja</b><span>R$ 30</span><p>Ajuste entre um corte e outro.</p></li><li><b>Escova</b><span>R$ 60</span><p>Lisa, modelada ou com volume.</p></li></ul></div>
+  <div class="painel" role="tabpanel" id="t2" aria-labelledby="b2" hidden><img src="https://images.pexels.com/photos/3993311/pexels-photo-3993311.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Coloração de cabelo no salão" loading="lazy" width="900" height="1125"><ul class="lista">
+    <li><b>Coloração</b><span>R$ 160</span><p>Cor uniforme, da raiz às pontas.</p></li><li><b>Mechas e luzes</b><span>R$ 280</span><p>Iluminado natural, feito no papel.</p></li><li><b>Retoque de raiz</b><span>R$ 110</span><p>Para manter a cor em dia.</p></li></ul></div>
+  <div class="painel" role="tabpanel" id="t3" aria-labelledby="b3" hidden><img src="https://images.pexels.com/photos/23349891/pexels-photo-23349891.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tratamento capilar" loading="lazy" width="900" height="1125"><ul class="lista">
+    <li><b>Hidratação</b><span>R$ 80</span><p>Para fio ressecado e sem brilho.</p></li><li><b>Reconstrução</b><span>R$ 120</span><p>Depois de química ou calor.</p></li><li><b>Progressiva</b><span>R$ 250</span><p>Redução de volume, sem formol.</p></li></ul></div>
+  <div class="painel" role="tabpanel" id="t4" aria-labelledby="b4" hidden><img src="https://images.pexels.com/photos/10561323/pexels-photo-10561323.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Penteado preso" loading="lazy" width="900" height="1125"><ul class="lista">
+    <li><b>Penteado</b><span>R$ 150</span><p>Festas, formaturas e eventos.</p></li><li><b>Noiva</b><span>sob consulta</span><p>Com prova antes do dia.</p></li><li><b>Babyliss</b><span>R$ 70</span><p>Ondas que duram a noite toda.</p></li></ul></div></div></section>
+<section class="sec" id="espaco" style="padding-top:0"><div class="w"><div class="espaco rv"><img src="https://images.pexels.com/photos/7750108/pexels-photo-7750108.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Interior de salão de beleza" loading="lazy" width="1800" height="1200">
+  <div><h2>O <em style="color:var(--blush)">espaço</em></h2><p>Luz natural, cadeiras confortáveis e um atendimento por vez em cada bancada. No site real, as fotos são do salão.</p></div></div></div></section>
+<section class="sec" id="depoimentos" style="padding-top:0"><div class="w"><h2 class="rv">O que dizem as <em>clientes</em></h2><p class="lead rv">Aqui entram avaliações reais do Google do salão. <span class="tag">Textos ilustrativos, não são de clientes reais</span></p>
+  <div class="dep"><figure class="rv"><blockquote>"Saí com o corte que eu levei anos tentando explicar."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure>
+    <figure class="rv"><blockquote>"A cor ficou natural e durou bem mais do que eu esperava."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure>
+    <figure class="rv"><blockquote>"Horário respeitado e um café gostoso. Virei cliente."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure></div></div></section>
+<section class="sec" id="agenda" style="padding-top:0"><div class="w"><div class="agenda rv"><div><h2>Agende o seu <em>horário</em></h2><p class="lead" style="margin-bottom:12px">A mensagem vai pronta para o WhatsApp do salão.</p><p class="nota">Neste modelo, o WhatsApp não está ligado a nenhum número: o botão mostra a mensagem que seria enviada.</p></div>
+  <form id="agenda-f" data-intro="Olá! Quero agendar pelo site do Atelier Lume."><label>Seu nome<input name="Nome" required autocomplete="name"></label>
+    <label>Serviço<select name="Serviço"><option>Corte feminino</option><option>Escova</option><option>Coloração</option><option>Mechas e luzes</option><option>Hidratação</option><option>Penteado</option></select></label>
+    <label>Dia<input name="Dia" type="date" required></label><label>Período<select name="Período"><option>Manhã</option><option>Tarde</option><option>Noite</option></select></label>
+    <button class="btn a full" type="submit">Montar mensagem</button></form></div></div></section>
+</main>
+<footer><div class="w"><p>Atelier Lume é um salão fictício criado pela Radar Group para mostrar um modelo de site. Fotos: Pexels (licença livre).</p></div></footer>
+<div class="barra"><a class="btn a" href="#agenda">Agendar horário</a></div>
+<dialog id="zapDlg" aria-labelledby="zapT"><h2 id="zapT">Mensagem pronta</h2><p class="nota">No site do salão, este botão abre o WhatsApp com a mensagem abaixo. Nada é enviado sem a cliente tocar em enviar.</p><pre></pre><div class="ctas"><button class="btn a" data-copiar>Copiar mensagem</button><button class="btn g" data-fechar>Fechar</button></div></dialog>
+<script>/* Comportamento comum dos modelos por nicho (entra inteiro dentro de cada HTML pelo montar.py).
+   - Menu do celular, entrada suave (desligada em prefers-reduced-motion), abas, galeria.
+   - WhatsApp: sem número configurado, o botão mostra a mensagem pronta numa janela e avisa que é
+     demonstração. Com ?zap=55DDDNUMERO no endereço, abre o WhatsApp de verdade (nada é enviado sem tocar em enviar). */
+(function () {
+  var R = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var z = (new URLSearchParams(location.search).get('zap') || '').replace(/\D/g, '').slice(0, 13), ZAP = z.length >= 12 ? z : '';
+  var b = document.querySelector('.menu-b'), n = document.querySelector('.nav');
+  if (b && n) {
+    b.addEventListener('click', function () { var o = n.classList.toggle('aberto'); b.setAttribute('aria-expanded', o); });
+    n.addEventListener('click', function (e) { if (e.target.closest('a')) { n.classList.remove('aberto'); b.setAttribute('aria-expanded', 'false'); } });
+  }
+  var els = document.querySelectorAll('.rv');
+  if (R || !('IntersectionObserver' in window)) els.forEach(function (e) { e.classList.add('on'); });
+  else { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' }); els.forEach(function (e) { io.observe(e); }); }
+  document.querySelectorAll('[data-tabs]').forEach(function (g) {
+    var bs = g.querySelectorAll('[role=tab]');
+    bs.forEach(function (t) { t.addEventListener('click', function () { bs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on; }); }); });
+    g.addEventListener('keydown', function (e) { var l = [].slice.call(bs), i = l.indexOf(document.activeElement); if (i < 0 || !/Arrow(Left|Right)/.test(e.key)) return; var p = l[(i + (e.key === 'ArrowRight' ? 1 : l.length - 1)) % l.length]; p.focus(); p.click(); });
+  });
+  var dlg = document.getElementById('zapDlg');
+  function zap(msg) {
+    if (ZAP) { window.open('https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener'); return; }
+    dlg.querySelector('pre').textContent = msg; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.querySelectorAll('[data-zap]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); zap(a.getAttribute('data-zap')); }); });
+  var f = document.querySelector('form[data-intro]');
+  if (f) f.addEventListener('submit', function (e) {
+    e.preventDefault(); var d = new FormData(f), p = [];
+    d.forEach(function (v, k) { if (String(v).trim()) p.push(k + ': ' + String(v).trim()); });
+    zap((f.getAttribute('data-intro') || 'Olá! Vim pelo site.') + '\n' + p.join('\n'));
+  });
+  if (dlg) {
+    dlg.querySelector('[data-copiar]').addEventListener('click', function (e) { var t = dlg.querySelector('pre').textContent, btn = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar mensagem'; }, 1500); }); });
+    dlg.querySelector('[data-fechar]').addEventListener('click', function () { dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+  }
+  var hoje = document.querySelectorAll('[data-hoje]'), dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  hoje.forEach(function (el) { el.textContent = dias[new Date().getDay()]; });
+})();
+</script>
+</body>
+</html>

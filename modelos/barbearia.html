@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ofício 27 · Barbearia (modelo de demonstração)</title>
+<meta name="robots" content="noindex, nofollow"><meta name="description" content="Modelo de site para barbearia feito pela Radar Group. Empresa fictícia.">
+<meta name="theme-color" content="#0c0c0c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#0c0c0c;--bg2:#141414;--bg3:#1c1c1c;--ink:#f2efe9;--mut:#a9a297;--brass:#cd9a4f;--brass2:#e2b878;--line:#2a2a2a;--ease:cubic-bezier(.2,.7,.2,1)}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Source Sans 3",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}a{color:inherit}.w{max-width:1200px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.95;margin:0}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.aviso{background:var(--brass);color:#14100a;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px}
+header{position:sticky;top:0;z-index:30;background:rgba(12,12,12,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.marca{font:700 24px/1 Oswald,sans-serif;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}.marca span{color:var(--brass)}
+.nav{display:flex;gap:26px;align-items:center}.nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--mut);transition:color .2s}.nav a:hover{color:var(--ink)}
+.menu-b{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:10px 12px;font:600 14px system-ui;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;font:700 15px/1 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .15s var(--ease),background .2s,color .2s}
+.btn:active{transform:scale(.97)}.btn.a{background:var(--brass);color:#14100a}.btn.a:hover{background:var(--brass2)}.btn.g{border:1.5px solid rgba(242,239,233,.45);color:var(--ink);background:transparent}.btn.g:hover{border-color:var(--ink)}
+.hero{position:relative;min-height:min(92svh,860px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04);animation:respira 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.7) 45%,rgba(8,8,8,.15) 100%),linear-gradient(0deg,rgba(8,8,8,.9),transparent 45%)}
+@keyframes respira{to{transform:scale(1.1)}}
+.hero .w{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end;padding-top:120px;padding-bottom:64px;width:100%}
+.olho{font:700 13px/1 Oswald,sans-serif;letter-spacing:.3em;color:var(--brass);text-transform:uppercase;margin:0 0 18px}
+.hero h1{font-size:clamp(54px,9.5vw,138px)}.hero h1 em{font-style:normal;color:var(--brass);display:block}
+.hero p.sub{font-size:20px;color:#d9d3c9;max-width:40ch;margin:22px 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.agora{background:rgba(20,20,20,.86);backdrop-filter:blur(8px);border:1px solid var(--line);padding:22px;align-self:end}
+.agora h2{font-size:18px;letter-spacing:.12em;color:var(--brass);margin-bottom:12px}.agora ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.agora li button{width:100%;background:var(--bg3);border:1px solid var(--line);color:var(--ink);padding:12px 0;font:600 15px "Source Sans 3",sans-serif;cursor:pointer;transition:border-color .2s,background .2s}.agora li button:hover{border-color:var(--brass);background:#221d15}
+.agora small{display:block;color:var(--mut);margin-top:10px;font-size:13px}
+.faixa{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;white-space:nowrap}.faixa div{display:inline-flex;gap:46px;padding:18px 0;animation:corre 40s linear infinite;font:600 18px Oswald,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--mut)}.faixa i{color:var(--brass);font-style:normal}
+@keyframes corre{to{transform:translateX(-50%)}}
+.sec{padding:110px 0}.sec h2{font-size:clamp(40px,6vw,78px);margin-bottom:18px}.sec .lead{color:var(--mut);max-width:52ch;margin:0 0 46px;font-size:18px}
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+.precos li{list-style:none;padding:22px 0;border-bottom:1px solid var(--line)}.precos ul{margin:0;padding:0}
+.precos .l{display:flex;align-items:baseline;gap:12px}.precos b{font:600 22px Oswald,sans-serif;text-transform:uppercase;letter-spacing:.03em}.precos i{flex:1;border-bottom:1.5px dotted #4a4a4a;transform:translateY(-6px)}.precos span{font:700 22px Oswald,sans-serif;color:var(--brass)}
+.precos p{margin:6px 0 0;color:var(--mut);font-size:15px}
+.tag{display:inline-block;font:600 11px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--mut);color:var(--mut);padding:4px 7px;vertical-align:middle}
+.equipe{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.equipe figure{margin:0;position:relative;overflow:hidden;background:var(--bg2)}.equipe img{aspect-ratio:4/5;object-fit:cover;width:100%;filter:grayscale(.35);transition:filter .5s,transform .6s var(--ease)}.equipe figure:hover img{filter:none;transform:scale(1.04)}
+.equipe figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}.equipe h3{font-size:28px}.equipe figcaption p{margin:2px 0 0;color:#d1cabf;font-size:14px}
+.gal{columns:3 260px;column-gap:14px}.gal img{width:100%;margin-bottom:14px;break-inside:avoid;transition:opacity .3s}.gal:hover img{opacity:.75}.gal img:hover{opacity:1}
+.alt{background:var(--bg2)}
+.agenda{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{display:grid;gap:6px;font-weight:600;font-size:15px}.full{grid-column:1/-1}
+input,select{font:inherit;font-size:16px;padding:14px;background:var(--bg);border:1px solid #3a3a3a;color:var(--ink);border-radius:0}input:focus,select:focus{border-color:var(--brass);outline:none}
+.nota{font-size:14px;color:var(--mut)}
+.local{display:grid;grid-template-columns:1fr 1fr;gap:28px}.local div{border:1px solid var(--line);padding:28px}.local h3{font-size:22px;letter-spacing:.08em;color:var(--brass);margin-bottom:12px}
+.horas{width:100%;border-collapse:collapse}.horas td{padding:8px 0;border-bottom:1px dashed var(--line)}.horas td+td{text-align:right}
+footer{padding:44px 0 110px;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv.on{opacity:1;transform:none}
+dialog{max-width:min(520px,92vw);background:var(--bg2);color:var(--ink);border:1px solid var(--line);padding:26px}dialog::backdrop{background:rgba(0,0,0,.7)}dialog pre{white-space:pre-wrap;font:15px/1.5 "Source Sans 3",sans-serif;background:var(--bg);padding:14px;border:1px solid var(--line)}dialog h2{font-size:24px;margin-bottom:10px}dialog .ctas{margin-top:16px}
+.barra{display:none}
+@media (max-width:900px){.hero .w,.agenda,.local,.precos{grid-template-columns:1fr}.equipe{grid-template-columns:1fr 1fr}.sec{padding:76px 0}
+  .nav{position:fixed;inset:70px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg2);border-bottom:1px solid var(--line);display:none;padding:8px 22px 18px}.nav.aberto{display:flex}.nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}.menu-b{display:block}
+  .barra{display:grid;grid-template-columns:1fr;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(12,12,12,.94);border-top:1px solid var(--line)}}
+@media (max-width:560px){.equipe{grid-template-columns:1fr}form{grid-template-columns:1fr}.agora ul{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="aviso" role="note"><b>Modelo de demonstração da Radar Group.</b> Empresa, equipe, preços e horários são fictícios. Fotos ilustrativas (Pexels).</div>
+<header><div class="w"><a class="marca" href="#topo">Ofício<span>27</span></a>
+  <button class="menu-b" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Seções"><a href="#precos">Serviços</a><a href="#equipe">Equipe</a><a href="#galeria">Galeria</a><a href="#local">Onde fica</a><a class="btn a" href="#agenda" style="min-height:44px;padding:10px 18px">Agendar</a></nav></div></header>
+<main id="topo">
+<section class="hero"><img src="https://images.pexels.com/photos/7518736/pexels-photo-7518736.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Barbeiro trabalhando em uma barbearia" width="1920" height="1280" fetchpriority="high">
+  <div class="w"><div><p class="olho">Barbearia de bairro</p><h1>Corte certo.<em>Hora marcada.</em></h1>
+    <p class="sub">Degradê, barba na toalha quente e acabamento na navalha. Você chega no horário e senta na cadeira.</p>
+    <div class="ctas"><a class="btn a" href="#agenda">Agendar pelo WhatsApp</a><a class="btn g" href="#precos">Ver preços</a></div></div>
+    <aside class="agora rv" aria-label="Horários de hoje"><h2><span data-hoje>Hoje</span> · horários</h2><ul>
+      <li><button data-zap="Olá! Quero agendar hoje às 14h.">14h</button></li><li><button data-zap="Olá! Quero agendar hoje às 15h30.">15h30</button></li><li><button data-zap="Olá! Quero agendar hoje às 17h.">17h</button></li>
+      <li><button data-zap="Olá! Quero agendar hoje às 18h30.">18h30</button></li><li><button data-zap="Olá! Quero agendar hoje às 19h.">19h</button></li><li><button data-zap="Olá! Quero agendar hoje às 20h.">20h</button></li></ul>
+      <small>Horários ilustrativos. No site real, a agenda vem da barbearia.</small></aside></div></section>
+<div class="faixa" aria-hidden="true"><div>Degradê <i>/</i> Barba <i>/</i> Navalha <i>/</i> Pigmentação <i>/</i> Sobrancelha <i>/</i> Platinado <i>/</i> Degradê <i>/</i> Barba <i>/</i> Navalha <i>/</i> Pigmentação <i>/</i> Sobrancelha <i>/</i> Platinado <i>/</i></div></div>
+<section class="sec" id="precos"><div class="w"><h2 class="rv">Serviços</h2><p class="lead rv">Tabela de exemplo <span class="tag">valores demonstrativos</span>. No site da barbearia entram os preços reais.</p>
+  <div class="precos rv"><ul>
+    <li><div class="l"><b>Corte</b><i></i><span>R$ 45</span></div><p>Tesoura ou máquina, lavagem e finalização.</p></li>
+    <li><div class="l"><b>Degradê</b><i></i><span>R$ 50</span></div><p>Do zero ao topo, transição limpa.</p></li>
+    <li><div class="l"><b>Barba</b><i></i><span>R$ 40</span></div><p>Toalha quente, navalha e hidratação.</p></li></ul><ul>
+    <li><div class="l"><b>Corte + barba</b><i></i><span>R$ 80</span></div><p>O combo completo, uma hora de cadeira.</p></li>
+    <li><div class="l"><b>Pigmentação</b><i></i><span>R$ 35</span></div><p>Preenche falhas da barba ou do corte.</p></li>
+    <li><div class="l"><b>Sobrancelha</b><i></i><span>R$ 20</span></div><p>Na navalha, sem exagero.</p></li></ul></div></div></section>
+<section class="sec alt" id="equipe"><div class="w"><h2 class="rv">Equipe</h2><p class="lead rv">Nomes e fotos ilustrativos <span class="tag">exemplo</span>. Aqui entram os barbeiros da casa.</p>
+  <div class="equipe">
+    <figure class="rv"><img src="https://images.pexels.com/photos/4625617/pexels-photo-4625617.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barbeiro cortando cabelo" loading="lazy" width="900" height="1125"><figcaption><h3>Rafa</h3><p>Degradê e desenho</p></figcaption></figure>
+    <figure class="rv"><img src="https://images.pexels.com/photos/9992819/pexels-photo-9992819.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barbeiro aparando barba de cliente" loading="lazy" width="900" height="1125"><figcaption><h3>Léo</h3><p>Barba e navalha</p></figcaption></figure>
+    <figure class="rv"><img src="https://images.pexels.com/photos/4625648/pexels-photo-4625648.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Corte masculino com máquina" loading="lazy" width="900" height="1125"><figcaption><h3>Bruno</h3><p>Corte clássico</p></figcaption></figure></div></div></section>
+<section class="sec" id="galeria"><div class="w"><h2 class="rv">Galeria</h2><p class="lead rv">Fotos ilustrativas do ramo. No site real, os cortes feitos na casa.</p>
+  <div class="gal rv">
+    <img src="https://images.pexels.com/photos/16553361/pexels-photo-16553361.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Barba sendo feita na navalha" loading="lazy" width="700" height="933">
+    <img src="https://images.pexels.com/photos/39559325/pexels-photo-39559325.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Corte degradê" loading="lazy" width="700" height="875">
+    <img src="https://images.pexels.com/photos/32329616/pexels-photo-32329616.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cliente na cadeira da barbearia" loading="lazy" width="700" height="1050">
+    <img src="https://images.pexels.com/photos/4625630/pexels-photo-4625630.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Barbeiro finalizando corte" loading="lazy" width="700" height="933">
+    <img src="https://images.pexels.com/photos/19827651/pexels-photo-19827651.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cabelo masculino platinado" loading="lazy" width="700" height="875">
+    <img src="https://images.pexels.com/photos/39559270/pexels-photo-39559270.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Barbeiro trabalhando" loading="lazy" width="700" height="933"></div></div></section>
+<section class="sec alt" id="agenda"><div class="w agenda"><div class="rv"><h2>Agende</h2><p class="lead">Escolha o serviço e o horário. A mensagem vai pronta para o WhatsApp da barbearia.</p><p class="nota">Neste modelo, o WhatsApp não está ligado a nenhum número: o botão mostra a mensagem que seria enviada.</p></div>
+  <form id="agenda" class="rv" data-intro="Olá! Quero agendar pelo site da Ofício 27.">
+    <label>Seu nome<input name="Nome" required autocomplete="name"></label>
+    <label>Serviço<select name="Serviço"><option>Corte</option><option>Degradê</option><option>Barba</option><option>Corte + barba</option><option>Pigmentação</option><option>Sobrancelha</option></select></label>
+    <label>Com quem<select name="Barbeiro"><option>Tanto faz</option><option>Rafa</option><option>Léo</option><option>Bruno</option></select></label>
+    <label>Dia<input name="Dia" type="date" required></label>
+    <button class="btn a full" type="submit">Montar mensagem de agendamento</button></form></div></section>
+<section class="sec" id="local"><div class="w"><h2 class="rv">Onde fica</h2><div class="local rv">
+  <div><h3>Endereço</h3><p>Rua Exemplo, 27 · Centro<br>Sua cidade <span class="tag">fictício</span></p><p class="nota">No site real: mapa e botão "Como chegar" com o endereço da barbearia.</p></div>
+  <div><h3>Horário</h3><table class="horas"><tr><td>Terça a sexta</td><td>9h às 20h</td></tr><tr><td>Sábado</td><td>8h às 18h</td></tr><tr><td>Domingo e segunda</td><td>Fechado</td></tr></table></div></div></div></section>
+</main>
+<footer><div class="w"><p>Ofício 27 é uma barbearia fictícia criada pela Radar Group para mostrar um modelo de site. Fotos: Pexels (licença livre).</p></div></footer>
+<div class="barra"><a class="btn a" href="#agenda">Agendar pelo WhatsApp</a></div>
+<dialog id="zapDlg" aria-labelledby="zapT"><h2 id="zapT">Mensagem pronta</h2><p class="nota">No site da barbearia, este botão abre o WhatsApp com a mensagem abaixo. Nada é enviado sem o cliente tocar em enviar.</p><pre></pre><div class="ctas"><button class="btn a" data-copiar>Copiar mensagem</button><button class="btn g" data-fechar>Fechar</button></div></dialog>
+<script>/* Comportamento comum dos modelos por nicho (entra inteiro dentro de cada HTML pelo montar.py).
+   - Menu do celular, entrada suave (desligada em prefers-reduced-motion), abas, galeria.
+   - WhatsApp: sem número configurado, o botão mostra a mensagem pronta numa janela e avisa que é
+     demonstração. Com ?zap=55DDDNUMERO no endereço, abre o WhatsApp de verdade (nada é enviado sem tocar em enviar). */
+(function () {
+  var R = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var z = (new URLSearchParams(location.search).get('zap') || '').replace(/\D/g, '').slice(0, 13), ZAP = z.length >= 12 ? z : '';
+  var b = document.querySelector('.menu-b'), n = document.querySelector('.nav');
+  if (b && n) {
+    b.addEventListener('click', function () { var o = n.classList.toggle('aberto'); b.setAttribute('aria-expanded', o); });
+    n.addEventListener('click', function (e) { if (e.target.closest('a')) { n.classList.remove('aberto'); b.setAttribute('aria-expanded', 'false'); } });
+  }
+  var els = document.querySelectorAll('.rv');
+  if (R || !('IntersectionObserver' in window)) els.forEach(function (e) { e.classList.add('on'); });
+  else { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' }); els.forEach(function (e) { io.observe(e); }); }
+  document.querySelectorAll('[data-tabs]').forEach(function (g) {
+    var bs = g.querySelectorAll('[role=tab]');
+    bs.forEach(function (t) { t.addEventListener('click', function () { bs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on; }); }); });
+    g.addEventListener('keydown', function (e) { var l = [].slice.call(bs), i = l.indexOf(document.activeElement); if (i < 0 || !/Arrow(Left|Right)/.test(e.key)) return; var p = l[(i + (e.key === 'ArrowRight' ? 1 : l.length - 1)) % l.length]; p.focus(); p.click(); });
+  });
+  var dlg = document.getElementById('zapDlg');
+  function zap(msg) {
+    if (ZAP) { window.open('https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener'); return; }
+    dlg.querySelector('pre').textContent = msg; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.querySelectorAll('[data-zap]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); zap(a.getAttribute('data-zap')); }); });
+  var f = document.querySelector('form[data-intro]');
+  if (f) f.addEventListener('submit', function (e) {
+    e.preventDefault(); var d = new FormData(f), p = [];
+    d.forEach(function (v, k) { if (String(v).trim()) p.push(k + ': ' + String(v).trim()); });
+    zap((f.getAttribute('data-intro') || 'Olá! Vim pelo site.') + '\n' + p.join('\n'));
+  });
+  if (dlg) {
+    dlg.querySelector('[data-copiar]').addEventListener('click', function (e) { var t = dlg.querySelector('pre').textContent, btn = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar mensagem'; }, 1500); }); });
+    dlg.querySelector('[data-fechar]').addEventListener('click', function () { dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+  }
+  var hoje = document.querySelectorAll('[data-hoje]'), dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  hoje.forEach(function (el) { el.textContent = dias[new Date().getDay()]; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bichos do Bairro · Pet shop (modelo de demonstração)</title>
+<meta name="robots" content="noindex, nofollow"><meta name="description" content="Modelo de site para pet shop feito pela Radar Group. Empresa fictícia.">
+<meta name="theme-color" content="#f7f3ec">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f7f3ec;--bg2:#ffffff;--ink:#173b33;--mut:#4d6158;--coral:#f2674b;--verde:#3c725e;--sol:#f6c453;--menta:#dceee4;--line:#e3ddd2;--ease:cubic-bezier(.2,.7,.2,1)}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}a{color:inherit}.w{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Fraunces,serif;font-weight:700;line-height:1.05;margin:0;letter-spacing:-.015em}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.aviso{background:var(--ink);color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px}
+header .w{display:flex;justify-content:space-between;align-items:center;min-height:78px;gap:14px}
+.marca{display:flex;align-items:center;gap:10px;font:700 24px/1 Fraunces,serif;text-decoration:none}.marca svg{width:36px;height:36px}
+.nav{display:flex;gap:24px;align-items:center}.nav a{text-decoration:none;font-weight:700;font-size:15px}.nav a:hover{color:var(--coral)}
+.menu-b{display:none;background:var(--bg2);border:2px solid var(--ink);border-radius:14px;padding:9px 14px;font:800 14px Nunito;cursor:pointer;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 26px;border-radius:16px;font:800 16px/1 Nunito,sans-serif;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .15s var(--ease),box-shadow .15s var(--ease)}
+.btn.a{background:var(--coral);color:#1a0f0b;box-shadow:4px 4px 0 var(--ink)}.btn.a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}.btn.a:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.g{background:var(--bg2);color:var(--ink)}.btn.g:hover{background:var(--menta)}
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:30px;padding-bottom:80px}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--menta);border-radius:99px;padding:8px 14px;font-weight:800;font-size:14px;margin-bottom:20px}
+.hero h1{font-size:clamp(48px,6.6vw,92px)}.hero h1 span{color:#c8452b;position:relative;white-space:nowrap}
+.hero h1 span::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.16em;background:var(--sol);z-index:-1;border-radius:6px}
+.hero p.sub{font-size:19px;color:var(--mut);max-width:40ch;margin:22px 0 30px}.ctas{display:flex;flex-wrap:wrap;gap:14px}
+.colagem{position:relative;aspect-ratio:1;max-width:560px;justify-self:center;width:100%}
+.colagem .blob{position:absolute;inset:6%;z-index:-1;color:var(--menta)}
+.colagem img{position:absolute;object-fit:cover;border:5px solid var(--bg2);box-shadow:0 22px 40px -22px rgba(23,59,51,.5)}
+.colagem .c1{left:4%;top:6%;width:58%;aspect-ratio:4/5;border-radius:36px;transform:rotate(-4deg)}
+.colagem .c2{right:2%;top:18%;width:42%;aspect-ratio:1;border-radius:50%}
+.colagem .c3{right:12%;bottom:2%;width:46%;aspect-ratio:5/4;border-radius:28px;transform:rotate(3deg)}
+.sec{padding:100px 0}.sec h2{font-size:clamp(38px,5vw,64px)}.lead{color:var(--mut);max-width:54ch;margin:14px 0 36px}
+.troca{display:inline-flex;background:var(--bg2);border:2px solid var(--ink);border-radius:16px;padding:4px;gap:4px;margin-bottom:28px}.troca button{border:0;background:transparent;padding:10px 20px;border-radius:12px;font:800 15px Nunito;cursor:pointer;color:var(--ink)}.troca button[aria-selected="true"]{background:var(--ink);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--bg2);border:2px solid var(--ink);border-radius:24px;padding:26px;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}.card:hover{transform:translateY(-4px);box-shadow:0 8px 0 var(--ink)}
+.card .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px}.card .ic svg{width:28px;height:28px}.card h3{font-size:26px;margin-bottom:6px}.card p{margin:0;color:var(--mut)}.card .pr{display:block;margin-top:14px;font-weight:800;color:var(--verde)}
+.tag{display:inline-block;font:700 11px/1 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1.5px dashed var(--mut);color:var(--mut);padding:4px 7px;border-radius:6px;vertical-align:middle}
+.verde{background:var(--ink);color:#f4efe6}.verde .lead,.verde .card p{color:#cfe0d8}.verde h2 span{color:var(--sol)}
+.produtos{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}.produtos img{border-radius:30px;border:5px solid var(--sol);aspect-ratio:4/3;object-fit:cover;width:100%}
+.produtos ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.produtos li{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;font-weight:700}
+.trilho{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,28%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.trilho figure{margin:0;scroll-snap-align:start}.trilho img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}.trilho figcaption{font-weight:700;margin-top:8px}
+.dep{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dep figure{margin:0;background:var(--bg2);border-radius:24px;padding:26px;border:2px solid var(--line)}.dep blockquote{margin:0 0 14px;font:600 20px/1.4 Fraunces,serif}.dep figcaption{color:var(--mut);font-size:14px}
+.agenda{display:grid;grid-template-columns:1fr 1fr;gap:44px;background:var(--sol);border:2px solid var(--ink);border-radius:32px;padding:50px;box-shadow:8px 8px 0 var(--ink)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:6px;font-weight:800;font-size:15px}.full{grid-column:1/-1}
+input,select{font:inherit;font-size:16px;padding:14px;border:2px solid var(--ink);border-radius:14px;background:var(--bg2);color:var(--ink)}input:focus,select:focus{outline:3px solid var(--coral);outline-offset:1px}
+.nota{font-size:14px;color:var(--ink);opacity:.85}
+footer{padding:46px 0 110px;color:var(--mut);font-size:14px}
+.rv{opacity:0;transform:translateY(22px) scale(.98);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.on{opacity:1;transform:none}
+dialog{max-width:min(520px,92vw);border:2px solid var(--ink);border-radius:24px;padding:28px;background:var(--bg2);color:var(--ink)}dialog::backdrop{background:rgba(23,59,51,.55)}dialog pre{white-space:pre-wrap;font:15px/1.5 Nunito,sans-serif;background:var(--bg);padding:14px;border-radius:14px}dialog h2{font-size:30px}dialog .ctas{margin-top:16px}
+.barra{display:none}
+@media (max-width:920px){.hero .w,.produtos,.agenda{grid-template-columns:1fr}.cards,.dep{grid-template-columns:1fr 1fr}.agenda{padding:28px 20px}.sec{padding:72px 0}.trilho{grid-auto-columns:72%}
+  .nav{position:fixed;inset:78px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg2);border-bottom:2px solid var(--ink);padding:6px 22px 18px;display:none;z-index:30}.nav.aberto{display:flex}.nav a{padding:14px 0;border-bottom:1px solid var(--line)}.menu-b{display:block}
+  .barra{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,243,236,.96);border-top:2px solid var(--ink)}.barra .btn{box-shadow:none}}
+@media (max-width:600px){.cards,.dep,form,.produtos ul{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="aviso" role="note"><b>Modelo de demonstração da Radar Group.</b> Pet shop, preços e depoimentos são fictícios. Fotos ilustrativas (Pexels).</div>
+<header><div class="w"><a class="marca" href="#topo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#f2674b"/><g fill="#173b33"><ellipse cx="20" cy="25" rx="7" ry="6"/><circle cx="12" cy="16" r="3"/><circle cx="17" cy="11" r="3"/><circle cx="23" cy="11" r="3"/><circle cx="28" cy="16" r="3"/></g></svg>Bichos do Bairro</a>
+  <button class="menu-b" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#galeria">Galeria</a><a href="#agenda">Agendar</a></nav></div></header>
+<main id="topo">
+<section class="hero"><div class="w"><div class="rv"><span class="pill">🐾 Banho, tosa e carinho</span><h1>Seu pet volta <span>cheirosinho</span> e tranquilo.</h1>
+  <p class="sub">Banho com produto certo para cada pelagem, tosa sem pressa e buscamos em casa no bairro. Você acompanha tudo pelo WhatsApp.</p>
+  <div class="ctas"><a class="btn a" href="#agenda">Agendar banho</a><a class="btn g" href="#servicos">Ver serviços</a></div></div>
+  <div class="colagem rv"><svg class="blob" viewBox="0 0 200 200" aria-hidden="true"><path fill="currentColor" d="M44 -58C56 -47 63 -30 66 -12C69 6 68 25 58 39C48 53 29 62 9 66C-11 70 -32 69 -47 58C-62 47 -71 26 -71 5C-71 -16 -62 -36 -48 -48C-34 -60 -17 -65 0 -65C17 -65 32 -69 44 -58Z" transform="translate(100 100) scale(1.35)"/></svg>
+    <img class="c1" src="https://images.pexels.com/photos/19145893/pexels-photo-19145893.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tosadora cuidando de cachorros" width="900" height="1125" fetchpriority="high">
+    <img class="c2" src="https://images.pexels.com/photos/19145897/pexels-photo-19145897.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cachorro tomando banho" loading="lazy" width="600" height="600">
+    <img class="c3" src="https://images.pexels.com/photos/19145898/pexels-photo-19145898.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Tosa com tesoura" loading="lazy" width="700" height="560"></div></div></section>
+<section class="sec" id="servicos" style="padding-top:40px"><div class="w"><h2 class="rv">O que fazemos</h2><p class="lead rv">Escolha o seu pet. Preços de exemplo <span class="tag">demonstrativos</span>.</p>
+  <div class="troca rv" data-tabs role="tablist" aria-label="Tipo de pet"><button role="tab" aria-selected="true" aria-controls="caes" id="tc">Cães</button><button role="tab" aria-selected="false" aria-controls="gatos" id="tg" tabindex="-1">Gatos</button></div>
+  <div class="cards" role="tabpanel" id="caes" aria-labelledby="tc">
+    <article class="card rv"><div class="ic" style="background:var(--menta)"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3ZM6 12V6a2 2 0 0 1 4 0"/><path d="M14 4v2M17 5v2M20 4v2"/></svg></div><h3>Banho</h3><p>Shampoo para o tipo de pelo, secagem e perfume suave.</p><span class="pr">a partir de R$ 50</span></article>
+    <article class="card rv"><div class="ic" style="background:#fde2da"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8 20 18M8.5 16 20 6"/></svg></div><h3>Tosa</h3><p>Higiênica, na máquina ou na tesoura, do jeito que o tutor pedir.</p><span class="pr">a partir de R$ 70</span></article>
+    <article class="card rv"><div class="ic" style="background:#fdf0c9"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 13h11l3-4h4v8h-2M3 13v4h2M9 17h6"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div><h3>Leva e traz</h3><p>Buscamos e devolvemos o pet no bairro, com hora combinada.</p><span class="pr">a partir de R$ 15</span></article></div>
+  <div class="cards" role="tabpanel" id="gatos" aria-labelledby="tg" hidden>
+    <article class="card"><div class="ic" style="background:var(--menta)"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3Z"/></svg></div><h3>Banho para gatos</h3><p>Em horário separado dos cães, ambiente calmo.</p><span class="pr">a partir de R$ 60</span></article>
+    <article class="card"><div class="ic" style="background:#fde2da"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8 20 18M8.5 16 20 6"/></svg></div><h3>Tosa higiênica</h3><p>Só o necessário, com o menor estresse possível.</p><span class="pr">a partir de R$ 55</span></article>
+    <article class="card"><div class="ic" style="background:#fdf0c9"><svg viewBox="0 0 24 24" fill="none" stroke="#173b33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg></div><h3>Corte de unhas</h3><p>Rápido, com contenção gentil.</p><span class="pr">a partir de R$ 20</span></article></div></div></section>
+<section class="sec verde" id="produtos"><div class="w produtos"><div class="rv"><h2>Ração e <span>acessórios</span></h2><p class="lead">Do que o seu pet precisa no dia a dia, com entrega no bairro. Itens ilustrativos <span class="tag" style="color:#cfe0d8;border-color:#cfe0d8">exemplo</span>.</p>
+  <ul><li>Rações secas e úmidas</li><li>Petiscos naturais</li><li>Coleiras e guias</li><li>Caminhas e brinquedos</li></ul></div>
+  <img class="rv" src="https://images.pexels.com/photos/27175967/pexels-photo-27175967.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Ração em um pote" loading="lazy" width="1100" height="825"></div></section>
+<section class="sec" id="galeria"><div class="w"><h2 class="rv">Clientes de quatro patas</h2><p class="lead rv">Fotos ilustrativas do ramo. No site real, os pets atendidos (com autorização dos tutores).</p>
+  <div class="trilho rv" tabindex="0" aria-label="Galeria, role para o lado">
+    <figure><img src="https://images.pexels.com/photos/19145877/pexels-photo-19145877.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cachorro na mesa de tosa" loading="lazy" width="700" height="875"><figcaption>Depois da tosa</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/19145881/pexels-photo-19145881.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cachorro no banho" loading="lazy" width="700" height="875"><figcaption>Hora do banho</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/6816839/pexels-photo-6816839.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Corte de unhas de cachorro" loading="lazy" width="700" height="875"><figcaption>Unhas em dia</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/19145879/pexels-photo-19145879.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Escovação do pelo" loading="lazy" width="700" height="875"><figcaption>Pelo escovado</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/6816870/pexels-photo-6816870.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Tosa de cachorro" loading="lazy" width="700" height="875"><figcaption>Tosa na tesoura</figcaption></figure></div></div></section>
+<section class="sec" style="padding-top:0"><div class="w"><h2 class="rv">Quem já veio</h2><p class="lead rv">Aqui entram avaliações reais do Google. <span class="tag">Textos ilustrativos, não são de clientes reais</span></p>
+  <div class="dep"><figure class="rv"><blockquote>"Meu cachorro tem medo de banho e voltou calmo. Mandaram foto durante."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure>
+    <figure class="rv"><blockquote>"O leva e traz salvou minha semana."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure>
+    <figure class="rv"><blockquote>"Tosa do jeito que eu pedi, sem surpresa."</blockquote><figcaption>Depoimento ilustrativo</figcaption></figure></div></div></section>
+<section class="sec" id="agenda" style="padding-top:0"><div class="w"><div class="agenda rv"><div><h2>Agende o banho</h2><p class="lead" style="color:var(--ink);margin-bottom:12px">Preencha e a mensagem vai pronta para o WhatsApp.</p><p class="nota">Neste modelo, o WhatsApp não está ligado a nenhum número: o botão mostra a mensagem que seria enviada.</p></div>
+  <form data-intro="Olá! Quero agendar pelo site do Bichos do Bairro."><label>Nome do tutor<input name="Tutor" required autocomplete="name"></label><label>Nome do pet<input name="Pet" required></label>
+    <label>Porte<select name="Porte"><option>Pequeno</option><option>Médio</option><option>Grande</option><option>Gato</option></select></label><label>Serviço<select name="Serviço"><option>Banho</option><option>Banho e tosa</option><option>Tosa higiênica</option><option>Corte de unhas</option></select></label>
+    <label>Dia<input name="Dia" type="date" required></label><label>Leva e traz?<select name="Leva e traz"><option>Não</option><option>Sim</option></select></label>
+    <button class="btn a full" type="submit">Montar mensagem</button></form></div></div></section>
+</main>
+<footer><div class="w"><p>Bichos do Bairro é um pet shop fictício criado pela Radar Group para mostrar um modelo de site. Fotos: Pexels (licença livre).</p></div></footer>
+<div class="barra"><a class="btn a" href="#agenda">Agendar banho</a></div>
+<dialog id="zapDlg" aria-labelledby="zapT"><h2 id="zapT">Mensagem pronta</h2><p class="nota">No site do pet shop, este botão abre o WhatsApp com a mensagem abaixo. Nada é enviado sem o tutor tocar em enviar.</p><pre></pre><div class="ctas"><button class="btn a" data-copiar>Copiar mensagem</button><button class="btn g" data-fechar>Fechar</button></div></dialog>
+<script>/* Comportamento comum dos modelos por nicho (entra inteiro dentro de cada HTML pelo montar.py).
+   - Menu do celular, entrada suave (desligada em prefers-reduced-motion), abas, galeria.
+   - WhatsApp: sem número configurado, o botão mostra a mensagem pronta numa janela e avisa que é
+     demonstração. Com ?zap=55DDDNUMERO no endereço, abre o WhatsApp de verdade (nada é enviado sem tocar em enviar). */
+(function () {
+  var R = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var z = (new URLSearchParams(location.search).get('zap') || '').replace(/\D/g, '').slice(0, 13), ZAP = z.length >= 12 ? z : '';
+  var b = document.querySelector('.menu-b'), n = document.querySelector('.nav');
+  if (b && n) {
+    b.addEventListener('click', function () { var o = n.classList.toggle('aberto'); b.setAttribute('aria-expanded', o); });
+    n.addEventListener('click', function (e) { if (e.target.closest('a')) { n.classList.remove('aberto'); b.setAttribute('aria-expanded', 'false'); } });
+  }
+  var els = document.querySelectorAll('.rv');
+  if (R || !('IntersectionObserver' in window)) els.forEach(function (e) { e.classList.add('on'); });
+  else { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' }); els.forEach(function (e) { io.observe(e); }); }
+  document.querySelectorAll('[data-tabs]').forEach(function (g) {
+    var bs = g.querySelectorAll('[role=tab]');
+    bs.forEach(function (t) { t.addEventListener('click', function () { bs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on; }); }); });
+    g.addEventListener('keydown', function (e) { var l = [].slice.call(bs), i = l.indexOf(document.activeElement); if (i < 0 || !/Arrow(Left|Right)/.test(e.key)) return; var p = l[(i + (e.key === 'ArrowRight' ? 1 : l.length - 1)) % l.length]; p.focus(); p.click(); });
+  });
+  var dlg = document.getElementById('zapDlg');
+  function zap(msg) {
+    if (ZAP) { window.open('https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener'); return; }
+    dlg.querySelector('pre').textContent = msg; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.querySelectorAll('[data-zap]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); zap(a.getAttribute('data-zap')); }); });
+  var f = document.querySelector('form[data-intro]');
+  if (f) f.addEventListener('submit', function (e) {
+    e.preventDefault(); var d = new FormData(f), p = [];
+    d.forEach(function (v, k) { if (String(v).trim()) p.push(k + ': ' + String(v).trim()); });
+    zap((f.getAttribute('data-intro') || 'Olá! Vim pelo site.') + '\n' + p.join('\n'));
+  });
+  if (dlg) {
+    dlg.querySelector('[data-copiar]').addEventListener('click', function (e) { var t = dlg.querySelector('pre').textContent, btn = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar mensagem'; }, 1500); }); });
+    dlg.querySelector('[data-fechar]').addEventListener('click', function () { dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+  }
+  var hoje = document.querySelectorAll('[data-hoje]'), dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  hoje.forEach(function (el) { el.textContent = dias[new Date().getDay()]; });
+})();
+</script>
+</body>
+</html>

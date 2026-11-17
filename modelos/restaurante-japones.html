@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kaiyō · Cozinha japonesa (modelo de demonstração)</title>
+<meta name="robots" content="noindex, nofollow"><meta name="description" content="Modelo de site para restaurante japonês feito pela Radar Group. Empresa fictícia.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0b0b0c;--bg2:#121214;--bg3:#1a1a1d;--ink:#efe9df;--mut:#aaa397;--ver:#e0493a;--ouro:#c9a45c;--line:#26262a;--ease:cubic-bezier(.2,.7,.2,1)}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}a{color:inherit}.w{max-width:1220px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Shippori Mincho",serif;font-weight:500;line-height:1.1;margin:0}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.aviso{background:var(--bg3);color:var(--mut);font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px;border-bottom:1px solid var(--line)}.aviso b{color:var(--ink)}
+header{position:absolute;left:0;right:0;z-index:20}header .w{display:flex;justify-content:space-between;align-items:center;min-height:84px;gap:14px}
+.marca{font:700 26px/1 "Shippori Mincho",serif;text-decoration:none;letter-spacing:.08em;display:flex;align-items:center;gap:12px}.marca i{width:12px;height:12px;border-radius:50%;background:var(--ver);display:inline-block}
+.nav{display:flex;gap:30px;align-items:center}.nav a{text-decoration:none;font-size:13.5px;letter-spacing:.18em;text-transform:uppercase;color:#d6d0c6}.nav a:hover{color:var(--ouro)}
+.menu-b{display:none;background:rgba(0,0,0,.4);border:1px solid #444;color:var(--ink);padding:10px 14px;font:500 14px Inter;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;font:600 13.5px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .15s var(--ease),background .25s,color .25s}
+.btn:active{transform:scale(.97)}.btn.a{background:#c43828;color:#fff}.btn.a:hover{background:#a92e20}.btn.g{border:1px solid rgba(239,233,223,.5);color:var(--ink);background:transparent}.btn.g:hover{border-color:var(--ouro);color:var(--ouro)}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:zoom 2.4s var(--ease) both}@keyframes zoom{from{transform:scale(1.12);filter:brightness(.4)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(11,11,12,.96) 8%,rgba(11,11,12,.35) 55%,rgba(11,11,12,.55))}
+.hero .w{width:100%;display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px;padding-bottom:70px}
+.kanji{writing-mode:vertical-rl;font:700 clamp(60px,9vw,130px)/1 "Shippori Mincho",serif;color:transparent;-webkit-text-stroke:1px rgba(201,164,92,.7);letter-spacing:.1em;user-select:none}
+.olho{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--ouro);margin:0 0 18px}
+.hero h1{font-size:clamp(56px,10vw,150px);letter-spacing:.02em}.hero p.sub{font-size:19px;color:#d6d0c6;max-width:44ch;margin:20px 0 32px}.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.sec{padding:120px 0}.sec h2{font-size:clamp(40px,5.4vw,72px)}.lead{color:var(--mut);max-width:54ch;margin:16px 0 44px}
+.num{font:500 14px Inter;letter-spacing:.3em;color:var(--ouro);margin-bottom:14px;display:block}
+.tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line);margin-bottom:40px}.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mut);padding:14px 22px;font:500 14px Inter;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:color .2s,border-color .2s}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ver)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}.menu img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.menu ul{list-style:none;margin:0;padding:0}.menu li{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 18px}
+.menu b{font:500 24px/1.2 "Shippori Mincho",serif}.menu span{color:var(--ouro);font-weight:600;align-self:center}.menu p{grid-column:1/-1;margin:0;color:var(--mut);font-size:15px}
+.tag{display:inline-block;font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--mut);color:var(--mut);padding:4px 7px;vertical-align:middle}
+.exp{display:grid;grid-template-columns:1.2fr .8fr;gap:0;background:var(--bg2);border:1px solid var(--line)}.exp img{width:100%;height:100%;object-fit:cover;min-height:520px}
+.exp div{padding:56px}.passos{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:22px;counter-reset:p}.passos li{counter-increment:p;display:grid;grid-template-columns:52px 1fr;gap:14px}.passos li::before{content:counter(p,decimal-leading-zero);font:500 26px/1 "Shippori Mincho",serif;color:var(--ver)}.passos b{display:block;font-size:17px}.passos span{color:var(--mut);font-size:15px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.info>div{background:var(--bg);padding:36px}.info h3{font-size:24px;margin-bottom:14px;color:var(--ouro)}
+.horas{width:100%;border-collapse:collapse}.horas td{padding:7px 0;border-bottom:1px dashed var(--line)}.horas td+td{text-align:right;color:var(--mut)}
+.reserva{text-align:center;position:relative;overflow:hidden;isolation:isolate}.reserva::before{content:"";position:absolute;inset:-40% 20%;z-index:-1;background:radial-gradient(closest-side,rgba(224,73,58,.18),transparent)}
+form{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:40px auto 0;text-align:left}label{display:grid;gap:6px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+input,select{font:inherit;font-size:16px;letter-spacing:0;text-transform:none;padding:14px;background:var(--bg2);border:1px solid #3a3a3e;color:var(--ink)}input:focus,select:focus{outline:none;border-color:var(--ouro)}
+form .btn{grid-column:1/-1;justify-self:center;min-width:280px}
+.nota{font-size:14px;color:var(--mut)}
+footer{padding:46px 0 110px;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}footer a{color:var(--ink)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rv.on{opacity:1;transform:none}
+dialog{max-width:min(520px,92vw);border:1px solid var(--line);padding:28px;background:var(--bg2);color:var(--ink)}dialog::backdrop{background:rgba(0,0,0,.75)}dialog pre{white-space:pre-wrap;font:15px/1.5 Inter,sans-serif;background:var(--bg);padding:14px}dialog h2{font-size:30px}dialog .ctas{margin-top:16px}
+.barra{display:none}
+@media (max-width:920px){.menu,.exp,.info{grid-template-columns:1fr}.exp img{min-height:320px}.exp div{padding:32px 24px}.sec{padding:80px 0}form{grid-template-columns:1fr 1fr}.kanji{display:none}.hero .w{grid-template-columns:1fr}
+  .nav{position:fixed;inset:84px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg2);padding:6px 24px 18px;border-bottom:1px solid var(--line);display:none}.nav.aberto{display:flex}.nav a{padding:14px 0;border-bottom:1px solid var(--line)}.menu-b{display:block}
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,11,12,.95);border-top:1px solid var(--line)}.barra .btn{padding:12px;letter-spacing:.1em}}
+@media (max-width:560px){form{grid-template-columns:1fr}form .btn{min-width:0;width:100%}.tabs button{padding:12px 14px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="aviso" role="note"><b>Modelo de demonstração da Radar Group.</b> Restaurante, cardápio, preços e horários são fictícios. Fotos ilustrativas (Wikimedia Commons, créditos no rodapé).</div>
+<header><div class="w"><a class="marca" href="#topo"><i></i>KAIYŌ</a><button class="menu-b" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Seções"><a href="#cardapio">Cardápio</a><a href="#experiencia">Experiência</a><a href="#visite">Visite</a><a href="#reserva">Reservar</a></nav></div></header>
+<main id="topo">
+<section class="hero"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tekkadon_001.jpg/1920px-Tekkadon_001.jpg" alt="Tigela de arroz com fatias de atum e folha de shiso" width="1920" height="1440" fetchpriority="high">
+  <div class="w"><div><p class="olho">Cozinha japonesa · balcão e salão</p><h1>Kaiyō</h1><p class="sub">Peixe fresco cortado na hora, arroz no ponto e um balcão onde você vê tudo acontecer.</p>
+    <div class="ctas"><a class="btn a" href="#reserva">Reservar mesa</a><a class="btn g" href="#cardapio">Ver cardápio</a></div></div><div class="kanji" aria-hidden="true">海洋</div></div></section>
+<section class="sec" id="cardapio"><div class="w"><span class="num rv">01 · CARDÁPIO</span><h2 class="rv">Do balcão para a mesa</h2><p class="lead rv">Cardápio e preços de exemplo <span class="tag">demonstrativos</span>. No site do restaurante, o cardápio real com fotos dos pratos da casa.</p>
+  <div class="tabs rv" data-tabs role="tablist" aria-label="Categorias do cardápio">
+    <button role="tab" aria-selected="true" aria-controls="m1" id="mb1">Sashimi</button><button role="tab" aria-selected="false" aria-controls="m2" id="mb2" tabindex="-1">Sushi</button><button role="tab" aria-selected="false" aria-controls="m3" id="mb3" tabindex="-1">Donburi</button><button role="tab" aria-selected="false" aria-controls="m4" id="mb4" tabindex="-1">Quentes</button></div>
+  <div class="menu" role="tabpanel" id="m1" aria-labelledby="mb1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sashimi_of_S%C3%A3o_Paulo.jpg/1280px-Sashimi_of_S%C3%A3o_Paulo.jpg" alt="Fatias de sashimi de salmão e peixe branco" loading="lazy" width="1280" height="850"><ul>
+    <li><b>Sashimi de salmão</b><span>R$ 48</span><p>10 fatias, corte grosso.</p></li><li><b>Sashimi misto</b><span>R$ 72</span><p>Salmão, atum e peixe branco do dia.</p></li><li><b>Usuzukuri</b><span>R$ 56</span><p>Peixe branco em lâminas, ponzu e cebolinha.</p></li></ul></div>
+  <div class="menu" role="tabpanel" id="m2" aria-labelledby="mb2" hidden><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Chef_Special_Sushi_Set_-_Memo_Wall_Japanese_Cuisine.jpg/1280px-Chef_Special_Sushi_Set_-_Memo_Wall_Japanese_Cuisine.jpg" alt="Prato com sushis variados" loading="lazy" width="1280" height="853"><ul>
+    <li><b>Seleção do chef</b><span>R$ 89</span><p>12 peças escolhidas no dia.</p></li><li><b>Niguiri de atum</b><span>R$ 24</span><p>Duas peças.</p></li><li><b>Hossomaki de pepino</b><span>R$ 18</span><p>Oito peças.</p></li></ul></div>
+  <div class="menu" role="tabpanel" id="m3" aria-labelledby="mb3" hidden><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Tekkadon_001.jpg/1280px-Tekkadon_001.jpg" alt="Tekkadon, tigela de arroz com atum" loading="lazy" width="1280" height="960"><ul>
+    <li><b>Tekkadon</b><span>R$ 62</span><p>Arroz de sushi e atum fatiado.</p></li><li><b>Chirashi</b><span>R$ 68</span><p>Peixes variados sobre arroz.</p></li><li><b>Sake don</b><span>R$ 54</span><p>Salmão e ovas.</p></li></ul></div>
+  <div class="menu" role="tabpanel" id="m4" aria-labelledby="mb4" hidden><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ramen_Jump_002.jpg/1280px-Ramen_Jump_002.jpg" alt="Tigela de lámen com ovo e carne de porco" loading="lazy" width="1280" height="850"><ul>
+    <li><b>Lámen tonkotsu</b><span>R$ 52</span><p>Caldo de porco, chashu e ovo marinado.</p></li><li><b>Gyoza</b><span>R$ 32</span><p>Seis unidades, na chapa.</p></li><li><b>Missoshiru</b><span>R$ 14</span><p>Tofu, alga e cebolinha.</p></li></ul></div></div></section>
+<section class="sec" id="experiencia" style="padding-top:0"><div class="w"><div class="exp rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Sushi_box_from_Yubu_by_the_Shota.jpg/1280px-Sushi_box_from_Yubu_by_the_Shota.jpg" alt="Caixas de madeira com sushi e acompanhamentos" loading="lazy" width="1280" height="960">
+  <div><span class="num">02 · EXPERIÊNCIA</span><h2>Omakase no balcão</h2><p class="lead" style="margin-bottom:0">Oito lugares, uma sequência que muda conforme o peixe que chegou no dia.</p>
+    <ol class="passos"><li><div><b>Você senta no balcão</b><span>Reserva com hora marcada, grupos de até 4.</span></div></li><li><div><b>O chef conduz</b><span>Cerca de 12 tempos, do mais leve ao mais intenso.</span></div></li><li><div><b>Sem pressa</b><span>Uma hora e meia, com saquê opcional.</span></div></li></ol></div></div></div></section>
+<section class="sec" id="visite" style="padding-top:0"><div class="w"><span class="num rv">03 · VISITE</span><h2 class="rv" style="margin-bottom:40px">Onde e quando</h2><div class="info rv">
+  <div><h3>Endereço</h3><p>Rua Exemplo, 88<br>Sua cidade <span class="tag">fictício</span></p><p class="nota">No site real: mapa e "Como chegar".</p></div>
+  <div><h3>Horário</h3><table class="horas"><tr><td>Terça a sexta</td><td>18h às 23h</td></tr><tr><td>Sábado</td><td>12h às 23h</td></tr><tr><td>Domingo</td><td>12h às 16h</td></tr><tr><td>Segunda</td><td>Fechado</td></tr></table></div>
+  <div><h3>Delivery</h3><p>Pedidos pelo WhatsApp, entrega no bairro.</p><a class="btn g" href="#" data-zap="Olá! Quero fazer um pedido para entrega.">Pedir pelo WhatsApp</a></div></div></div></section>
+<section class="sec reserva" id="reserva" style="padding-top:20px"><div class="w"><span class="num rv">04 · RESERVA</span><h2 class="rv">Reserve sua mesa</h2><p class="lead rv" style="margin-inline:auto">A mensagem vai pronta para o WhatsApp do restaurante. Neste modelo, o botão mostra a mensagem que seria enviada.</p>
+  <form class="rv" data-intro="Olá! Quero reservar uma mesa no Kaiyō."><label>Nome<input name="Nome" required autocomplete="name"></label><label>Dia<input name="Dia" type="date" required></label>
+    <label>Horário<select name="Horário"><option>19h</option><option>19h30</option><option>20h</option><option>20h30</option><option>21h</option></select></label><label>Pessoas<select name="Pessoas"><option>2</option><option>3</option><option>4</option><option>5 ou mais</option></select></label>
+    <button class="btn a" type="submit">Montar pedido de reserva</button></form></div></section>
+</main>
+<footer><div class="w"><p>Kaiyō é um restaurante fictício criado pela Radar Group para mostrar um modelo de site.</p>
+  <p>Fotos (Wikimedia Commons): <a href="https://commons.wikimedia.org/wiki/File:Tekkadon_001.jpg" target="_blank" rel="noopener">Tekkadon</a> e <a href="https://commons.wikimedia.org/wiki/File:Ramen_Jump_002.jpg" target="_blank" rel="noopener">lámen</a>, Ocdp, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Chef_Special_Sushi_Set_-_Memo_Wall_Japanese_Cuisine.jpg" target="_blank" rel="noopener">sushi</a>, Andy Li, CC0 ·
+  <a href="https://commons.wikimedia.org/wiki/File:Sashimi_of_S%C3%A3o_Paulo.jpg" target="_blank" rel="noopener">sashimi</a>, Wilfredor, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Sushi_box_from_Yubu_by_the_Shota.jpg" target="_blank" rel="noopener">caixas de sushi</a>, Dllu, CC BY-SA 4.0.</p></div></footer>
+<div class="barra"><a class="btn a" href="#reserva">Reservar</a><a class="btn g" href="#cardapio">Cardápio</a></div>
+<dialog id="zapDlg" aria-labelledby="zapT"><h2 id="zapT">Mensagem pronta</h2><p class="nota">No site do restaurante, este botão abre o WhatsApp com a mensagem abaixo. Nada é enviado sem o cliente tocar em enviar.</p><pre></pre><div class="ctas"><button class="btn a" data-copiar>Copiar mensagem</button><button class="btn g" data-fechar>Fechar</button></div></dialog>
+<script>/* Comportamento comum dos modelos por nicho (entra inteiro dentro de cada HTML pelo montar.py).
+   - Menu do celular, entrada suave (desligada em prefers-reduced-motion), abas, galeria.
+   - WhatsApp: sem número configurado, o botão mostra a mensagem pronta numa janela e avisa que é
+     demonstração. Com ?zap=55DDDNUMERO no endereço, abre o WhatsApp de verdade (nada é enviado sem tocar em enviar). */
+(function () {
+  var R = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var z = (new URLSearchParams(location.search).get('zap') || '').replace(/\D/g, '').slice(0, 13), ZAP = z.length >= 12 ? z : '';
+  var b = document.querySelector('.menu-b'), n = document.querySelector('.nav');
+  if (b && n) {
+    b.addEventListener('click', function () { var o = n.classList.toggle('aberto'); b.setAttribute('aria-expanded', o); });
+    n.addEventListener('click', function (e) { if (e.target.closest('a')) { n.classList.remove('aberto'); b.setAttribute('aria-expanded', 'false'); } });
+  }
+  var els = document.querySelectorAll('.rv');
+  if (R || !('IntersectionObserver' in window)) els.forEach(function (e) { e.classList.add('on'); });
+  else { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' }); els.forEach(function (e) { io.observe(e); }); }
+  document.querySelectorAll('[data-tabs]').forEach(function (g) {
+    var bs = g.querySelectorAll('[role=tab]');
+    bs.forEach(function (t) { t.addEventListener('click', function () { bs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on; }); }); });
+    g.addEventListener('keydown', function (e) { var l = [].slice.call(bs), i = l.indexOf(document.activeElement); if (i < 0 || !/Arrow(Left|Right)/.test(e.key)) return; var p = l[(i + (e.key === 'ArrowRight' ? 1 : l.length - 1)) % l.length]; p.focus(); p.click(); });
+  });
+  var dlg = document.getElementById('zapDlg');
+  function zap(msg) {
+    if (ZAP) { window.open('https://wa.me/' + ZAP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener'); return; }
+    dlg.querySelector('pre').textContent = msg; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.querySelectorAll('[data-zap]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); zap(a.getAttribute('data-zap')); }); });
+  var f = document.querySelector('form[data-intro]');
+  if (f) f.addEventListener('submit', function (e) {
+    e.preventDefault(); var d = new FormData(f), p = [];
+    d.forEach(function (v, k) { if (String(v).trim()) p.push(k + ': ' + String(v).trim()); });
+    zap((f.getAttribute('data-intro') || 'Olá! Vim pelo site.') + '\n' + p.join('\n'));
+  });
+  if (dlg) {
+    dlg.querySelector('[data-copiar]').addEventListener('click', function (e) { var t = dlg.querySelector('pre').textContent, btn = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { btn.textContent = 'Copiado'; setTimeout(function () { btn.textContent = 'Copiar mensagem'; }, 1500); }); });
+    dlg.querySelector('[data-fechar]').addEventListener('click', function () { dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+  }
+  var hoje = document.querySelectorAll('[data-hoje]'), dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  hoje.forEach(function (el) { el.textContent = dias[new Date().getDay()]; });
+})();
+</script>
+</body>
+</html>
