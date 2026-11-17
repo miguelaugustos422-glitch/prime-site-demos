@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f1b2d">
+<title>Capitão Mustache Barbearia · demonstração de site</title>
+<meta name="description" content="Demonstração não oficial de site para a Capitão Mustache Barbearia, Maracanã, Anápolis.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;700&display=swap">
+<style>
+:root{--navy:#0f1b2d;--navy2:#16263d;--line:#253652;--brass:#c9a227;--brass2:#e3c766;--cream:#efe6d2;--muted:#a9b3c4;--r:6px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--cream);font:16px/1.65 Karla,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}
+.demo{background:var(--brass);color:#14100a;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:12px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca svg{width:44px;height:22px;fill:var(--brass)}
+.marca b{font:400 22px/1 "DM Serif Display",serif;letter-spacing:.01em}
+.marca small{display:block;font:700 10px/1 Karla,sans-serif;letter-spacing:.32em;color:var(--brass);margin-top:5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font-weight:700;letter-spacing:.04em;text-decoration:none;text-transform:uppercase;font-size:14px;transition:background .2s,color .2s,border-color .2s}
+.btn.o{background:var(--brass);color:#14100a}.btn.o:hover{background:var(--brass2)}
+.btn.l{border:1.5px solid var(--line);color:var(--cream)}.btn.l:hover{border-color:var(--brass)}
+.btn.sm{padding:11px 18px;font-size:12px}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+:focus-visible{outline:3px solid var(--brass2);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:620px;border-block:1px solid var(--line)}
+.hero .txt{padding:72px 56px 72px 0;display:flex;flex-direction:column;justify-content:center}
+.emblema{width:96px;height:48px;fill:var(--brass);margin-bottom:28px}
+.hero p.pre{font:700 12px/1 Karla,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+h1{font:400 clamp(52px,7.4vw,96px)/.98 "DM Serif Display",serif;margin:0}
+h1 em{color:var(--brass2)}
+.sub{color:var(--muted);font-size:18px;max-width:34ch;margin:22px 0 32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:14px;color:var(--muted)}
+.status i{width:9px;height:9px;border-radius:50%;background:#5c6b82}
+.status.aberto i{background:#72d39a;box-shadow:0 0 0 4px rgba(114,211,154,.16)}
+.hero .img{position:relative;border-left:1px solid var(--line)}
+.hero .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.hero .img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,27,45,.55),transparent 40%)}
+section{padding:96px 0}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+h2{font:400 clamp(38px,5vw,60px)/1 "DM Serif Display",serif;margin:0}
+h2 em{color:var(--brass2)}
+.cab p{color:var(--muted);max-width:40ch;margin:0}
+.serv{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.s{background:var(--navy2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.s:hover{border-color:var(--brass)}
+.s img{aspect-ratio:3/4;width:100%;object-fit:cover;filter:saturate(.85)}
+.s div{padding:16px}
+.s h3{font:400 22px/1.15 "DM Serif Display",serif;margin:0 0 6px}
+.s p{margin:0;font-size:14px;color:var(--muted)}
+.nota{font-size:13px;color:var(--muted);margin-top:22px;border-left:2px solid var(--brass);padding-left:12px}
+.horas{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.tab{background:var(--navy2);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+.tab table{width:100%;border-collapse:collapse}
+.tab td{padding:12px 0;border-bottom:1px dashed var(--line)}
+.tab td:last-child{text-align:right;font-weight:700}
+.tab tr.hoje td{color:var(--brass2)}
+.tab tr:last-child td{border-bottom:0}
+.mapa{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-height:340px}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.5)}
+.agenda{text-align:center;border-top:1px solid var(--line)}
+.agenda .emblema{margin:0 auto 24px}
+.agenda p{color:var(--muted);max-width:46ch;margin:16px auto 30px}
+footer{border-top:1px solid var(--line);padding:30px 0 100px;font-size:13px;color:var(--muted)}
+.zap{position:fixed;right:18px;bottom:18px;z-index:6;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.45)}
+.zap svg{width:30px;height:30px;fill:#fff}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (max-width:1000px){.serv{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:860px){.hero{grid-template-columns:1fr;min-height:0}.hero .txt{padding:44px 0}.hero .img{min-height:300px;border-left:0;border-top:1px solid var(--line);margin:0 -20px}.horas{grid-template-columns:1fr}section{padding:64px 0}.serv{grid-template-columns:repeat(2,1fr)}.top .btn span{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bigode" viewBox="0 0 120 50"><path d="M60 22c-6-10-18-15-30-11C18 15 12 27 2 25c4 10 18 19 33 16 11-2 19-9 25-15 6 6 14 13 25 15 15 3 29-6 33-16-10 2-16-10-28-14-12-4-24 1-30 11Z"/></symbol></svg>
+<div class="demo" role="note"><b>Demonstração não oficial</b> feita pela Prime Site para apresentar à Capitão Mustache Barbearia. Fotos ilustrativas.</div>
+<header class="top"><div class="wrap">
+  <a class="marca" href="#"><svg aria-hidden="true"><use href="#bigode"/></svg><span><b>Capitão Mustache</b><small>BARBEARIA</small></span></a>
+  <a class="btn o sm" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5562981760907?text=Ol%C3%A1%2C%20Capit%C3%A3o%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Agendar</span></a>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div class="txt">
+    <svg class="emblema" aria-hidden="true"><use href="#bigode"/></svg>
+    <p class="pre">Maracanã · Anápolis</p>
+    <h1>Barba feita<br>com <em>patente</em> de capitão.</h1>
+    <p class="sub">Corte, barba e acabamento na Avenida Presidente Kennedy. Escolha o horário pelo WhatsApp e chegue na hora certa.</p>
+    <div class="ctas">
+      <a class="btn o" href="https://wa.me/5562981760907?text=Ol%C3%A1%2C%20Capit%C3%A3o%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn l" href="#servicos">Ver serviços</a>
+    </div>
+    <p class="status" id="status"><i></i><span>Segunda a sábado, 9h às 19h30</span></p>
+  </div>
+  <div class="img"><img src="https://images.pexels.com/photos/7518736/pexels-photo-7518736.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Barbeiro atendendo cliente na cadeira" width="1200" height="800" fetchpriority="high"></div>
+</div>
+
+<section id="servicos"><div class="wrap">
+  <div class="cab"><h2 class="rv">Os <em>serviços</em></h2><p class="rv">Valores e horários livres direto com a barbearia, pelo WhatsApp.</p></div>
+  <div class="serv">
+    <article class="s rv"><img src="https://images.pexels.com/photos/4625648/pexels-photo-4625648.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte masculino na tesoura" loading="lazy" width="500" height="667"><div><h3>Corte</h3><p>Tesoura ou máquina</p></div></article>
+    <article class="s rv"><img src="https://images.pexels.com/photos/16553361/pexels-photo-16553361.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Barba feita na navalha" loading="lazy" width="500" height="667"><div><h3>Barba</h3><p>Desenho e acabamento</p></div></article>
+    <article class="s rv"><img src="https://images.pexels.com/photos/9992819/pexels-photo-9992819.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte e barba no mesmo atendimento" loading="lazy" width="500" height="667"><div><h3>Corte + barba</h3><p>Os dois de uma vez</p></div></article>
+    <article class="s rv"><img src="https://images.pexels.com/photos/39559325/pexels-photo-39559325.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Degradê feito na máquina" loading="lazy" width="500" height="667"><div><h3>Degradê</h3><p>Do baixo ao alto</p></div></article>
+    <article class="s rv"><img src="https://images.pexels.com/photos/8160456/pexels-photo-8160456.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Acabamento de sobrancelha masculina" loading="lazy" width="500" height="667"><div><h3>Sobrancelha</h3><p>Acabamento</p></div></article>
+  </div>
+  <p class="nota rv">Na demonstração, a lista de serviços e as fotos são exemplos do ramo. No site de verdade, entram os serviços, os valores e as fotos da Capitão Mustache.</p>
+</div></section>
+
+<section id="onde" style="padding-top:0"><div class="wrap horas">
+  <div class="tab rv">
+    <h2 style="font-size:40px;margin-bottom:18px">Horário</h2>
+    <table id="tabela" aria-label="Horário de funcionamento">
+      <tr data-d="1"><td>Segunda</td><td>9h – 19h30</td></tr>
+      <tr data-d="2"><td>Terça</td><td>9h – 19h30</td></tr>
+      <tr data-d="3"><td>Quarta</td><td>9h – 19h30</td></tr>
+      <tr data-d="4"><td>Quinta</td><td>9h – 19h30</td></tr>
+      <tr data-d="5"><td>Sexta</td><td>9h – 19h30</td></tr>
+      <tr data-d="6"><td>Sábado</td><td>9h – 19h30</td></tr>
+      <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+    </table>
+    <p style="margin:22px 0 0">Avenida Presidente Kennedy, 1338<br>Maracanã, Anápolis</p>
+    <div class="ctas" style="margin-top:20px"><a class="btn l sm" href="https://www.google.com/maps/search/?api=1&amp;query=-16.30799,-48.9603936" target="_blank" rel="noopener">Abrir no mapa</a></div>
+  </div>
+  <div class="mapa rv"><iframe title="Mapa: Avenida Presidente Kennedy, 1338, Maracanã, Anápolis" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-48.9644%2C-16.3106%2C-48.9564%2C-16.3054&amp;layer=mapnik&amp;marker=-16.30799%2C-48.9603936"></iframe></div>
+</div></section>
+
+<section class="agenda"><div class="wrap rv">
+  <svg class="emblema" aria-hidden="true"><use href="#bigode"/></svg>
+  <h2>Marque seu <em>horário.</em></h2>
+  <p>Mande uma mensagem com o serviço e o melhor horário. A barbearia confirma pelo WhatsApp.</p>
+  <a class="btn o" href="https://wa.me/5562981760907?text=Ol%C3%A1%2C%20Capit%C3%A3o%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">(62) 98176-0907</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Demonstração não oficial, feita pela Prime Site para apresentar à Capitão Mustache Barbearia. Endereço, WhatsApp e horário: OpenStreetMap, conferidos em 03/11/2026. Fotos: Pexels (licença livre), ilustrativas.</p>
+</div></footer>
+<a class="zap" href="https://wa.me/5562981760907?text=Ol%C3%A1%2C%20Capit%C3%A3o%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.2-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/></svg></a>
+<script>
+// horário real (OpenStreetMap: Mo-Sa 09:00-19:30), no fuso de Anápolis
+(function () {
+  var A = [9, 19.5], H = { 1: A, 2: A, 3: A, 4: A, 5: A, 6: A };
+  var p = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
+  var g = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
+  var dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(g('weekday')), h = (+g('hour') % 24) + (+g('minute')) / 60, d = H[dia];
+  var el = document.getElementById('status'), tr = document.querySelector('#tabela tr[data-d="' + dia + '"]');
+  if (tr) tr.className = 'hoje';
+  if (d && h >= d[0] && h < d[1]) { el.classList.add('aberto'); el.lastElementChild.textContent = 'Aberto agora · fecha às 19h30'; }
+  else if (d && h < d[0]) el.lastElementChild.textContent = 'Fechado agora · abre hoje às 9h';
+  else el.lastElementChild.textContent = 'Fechado agora · abre ' + (dia === 6 || dia === 0 ? 'segunda' : 'amanhã') + ' às 9h';
+})();
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(function (e) { e.classList.add('on'); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+</body>
+</html>
